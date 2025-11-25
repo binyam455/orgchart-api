@@ -10,7 +10,7 @@ INSTALLATION
 a. Create a postgresql database named "orga_structure"
 
 b. Download the project files and replace the postgresql "password" value in the file 
-"src/entities/app.module.ts" with your database password
+"src/app.module.ts" with your database password
 
 c. Run command "npm install" in the project directoy followed by the command "npm start"
 
