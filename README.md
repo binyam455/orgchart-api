@@ -2,9 +2,11 @@ This application provides API access to a postgresql database called "orga_struc
 manipulate data for organization chart display
 
 CLIENT 
+
 The accompanying client application can be found at (link)
 
 INSTALLATION
+
 a. Create a postgresql database named "orga_structure"
 
 b. Download the project files and replace the postgresql "password" value in the file 
