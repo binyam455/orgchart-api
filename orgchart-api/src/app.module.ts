@@ -11,7 +11,7 @@ import { DataService } from './app.service';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'biny',
+      password: 'abc123',
       database: 'orga_structure',
       entities: [OrgChart],
       synchronize: true,
@@ -22,3 +22,4 @@ import { DataService } from './app.service';
   providers: [DataService]
 })
 export class AppModule {}
+
