@@ -18,9 +18,6 @@ END POINTS
 
 GET /orgchart
 Retrive all records
-    async getAllChart(): Promise<OrgChart[]> {
-        return await this.orgChartRepository.find();
-    }
 
 GET /orgchart/:id
 Retrieve a single record with id equal to "id"
