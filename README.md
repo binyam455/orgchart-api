@@ -3,7 +3,7 @@ manipulate data for organization chart display
 
 CLIENT 
 
-The accompanying client application can be found at (link)
+The accompanying client application can be found at (https://github.com/binyam455/orgchart-app)
 
 INSTALLATION
 
