@@ -16,6 +16,8 @@ c. Run command "npm install" in the project directoy followed by the command "np
 
 END POINTS
 
+Base URL: http://localhost:5000
+
 GET /orgchart
 Retrive all records
 
