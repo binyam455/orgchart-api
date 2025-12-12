@@ -25,8 +25,13 @@ export class OrgChartService {
         return await this.orgChartRepository.save(orgchart);
     }
     
-    async updateChart(@Param("id") id: any, @Body() orgchart: OrgChart): Promise<OrgChart|null> {
-        await this.orgChartRepository.update(id, orgchart);  
+    async updateChart(@Param("id") id: any, @Body() body: any): Promise<OrgChart|null> {
+        await this.orgChartRepository.update(id, 
+                                             { id: body.id,
+                                               name: body.name,
+                                               description: body.description,
+                                               manager_id: body.manager_selid
+                                             });  
         return await this.orgChartRepository.findOneBy({ id : id });
     }
 
