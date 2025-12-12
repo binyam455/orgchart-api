@@ -38,12 +38,13 @@ export class OrgChartService {
     async getFormattedChartData(): Promise<any[]> {
         const result = await this.dataSource.query(
         "WITH Recursive emps AS (" +
-        "SELECT id, name, description, manager_id, 1 AS level " +
+        "SELECT id, name, description, manager_id, 1 AS level, name AS path " +
         "FROM orgchart WHERE manager_id = 0 " +
         "UNION ALL " +
-        "SELECT o.id, o.name, o.description, o.manager_id, e.level + 1 AS level " +
+        "SELECT o.id, o.name, o.description, o.manager_id, " +
+        "e.level + 1 AS level, e.path || ' ->> ' || o.name AS path " +
         "FROM orgchart o INNER JOIN emps e ON o.manager_id = e.id ) " +
-        "SELECT id, name, description, manager_id, level " +
+        "SELECT id, name, description, manager_id, level, path " +
         "FROM emps ORDER BY level;");
         
         return result;
